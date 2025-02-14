@@ -16,7 +16,7 @@ const md_upload = multipart({uploadDir: './uploads/users'});
 // registro
 api.post('/register', UserController.saveUser);
 // prueba
-api.get('/pruebas', md_auth.ensureAuth, UserController.prueba);
+api.get('/pruebas', UserController.prueba);
 // login
 api.post('/login', UserController.loginUser);
 // buscar usuario y pasar por parametro el id de otro usuario para ver si lo sigo
